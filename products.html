@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Products - ReadMart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                ReadMart
+            </a>
+            <nav class="nav">
+                <a href="products.html" class="nav-link active">Products</a>
+                <a href="cart.html" class="nav-link cart-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+                <div class="auth-buttons" id="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <div class="user-menu" id="user-menu" style="display: none;">
+                    <span class="user-name" id="user-name"></span>
+                    <button class="btn btn-outline" onclick="logout()">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="products-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Our Products</h1>
+                <p>Find the perfect books, pens, and stationery for your needs</p>
+            </div>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="books">Books</button>
+                <button class="filter-btn" data-category="pens">Pens</button>
+                <button class="filter-btn" data-category="notebooks">Notebooks</button>
+                <button class="filter-btn" data-category="accessories">Accessories</button>
+            </div>
+
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ReadMart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="products-data.js"></script>
+    <script src="app.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>
